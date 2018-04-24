@@ -1,0 +1,25 @@
+node_modules/
+logs/
+coverage/
+run/
+dist/
+
+# server webroot
+server/app/view/index.html
+server/app/public/static
+
+# Editor directories and files
+.idea/
+.vscode/
+
+# theme directory
+web/theme/*
+!web/theme/src
+!web/theme/src/node_modules
+!web/theme/fonts
+!web/theme/index.css
+
+.DS_Store
+package-lock.json
+debug.log*
+npm-debug.log*

@@ -1,0 +1,1217 @@
+{
+	"info": {
+		"name": "角色管理平台接口文档",
+		"_postman_id": "25f6fee7-f730-80e1-71f6-2c9153782163",
+		"description": "角色管理平台接口文档",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "登录登出",
+			"description": "",
+			"item": [
+				{
+					"name": "登录",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"login"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "登出",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/role-manage/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"logout"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取登录状态",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/role-manage/logstate",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"logstate"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "系统",
+			"description": "",
+			"item": [
+				{
+					"name": "创建系统",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"system_name\": \"测试\",\n\t\"system_password\": \"123\",\n\t\"created_by\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/system",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"system"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取系统列表",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/role-manage/system",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"system"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取系统详情",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/role-manage/system/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"system",
+								"1"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "更改系统名称或密码",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"system_id\": 1,\n\t\"system_name\": \"主系统\",\n\t\"old_password\": \"123\",\n\t\"new_password\": \"1234\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/system",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"system"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "角色",
+			"description": "",
+			"item": [
+				{
+					"name": "创建角色",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"role_name\": \"user\",\n\t\"created_by\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/role",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"role"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取角色列表",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/role-manage/role",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"role"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取角色详情",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/role-manage/role/11",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"role",
+								"11"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "更改角色名称",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"role_id\": 11,\n\t\"role_name\": \"测试用数据\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/role",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"role"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "删除角色",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/role-manage/role/11",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"role",
+								"11"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "资源",
+			"description": "",
+			"item": [
+				{
+					"name": "创建资源",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"resource_name\": \"测试用\",\n\t\"resource_type\": \"text\",\n\t\"value\": \"none\",\n\t\"created_by\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/resource",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"resource"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取资源列表",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/role-manage/resource",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"resource"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "编辑资源",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"resource_id\": 3,\n\t\"resource_name\": \"test\",\n\t\"resource_type\": \"s\",\n\t\"value\": \"dd\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/resource",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"resource"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "删除资源",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/role-manage/resource/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"resource",
+								"1"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "用户-角色关系",
+			"description": "",
+			"item": [
+				{
+					"name": "创建角色-用户关系",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"role_id\": 10,\n\t\"user_id\": [2],\n\t\"created_by\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/userrole",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"userrole"
+							]
+						},
+						"description": "user_id为数组，role_id为数字"
+					},
+					"response": []
+				},
+				{
+					"name": "获取角色对应的用户",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"role_name\": \"bbbb\",\n\t\"value\": 3,\n\t\"resource_type\": \"pic\",\n\t\"resource_name\": \"fuc\",\n\t\"created_by\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/userrole/role/7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"userrole",
+								"role",
+								"7"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取用户对应的角色",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/role-manage/userrole/user/7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"userrole",
+								"user",
+								"7"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "删除用户--角色关系",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_id\": \"0\",\n\t\"role_id\": 7\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/userrole",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"userrole"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "角色-资源关系",
+			"description": "",
+			"item": [
+				{
+					"name": "批量创建单个资源对多个角色的关系",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"resource_id\": 1,\n\t\"role_id\": [544545],\n\t\"created_by\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/resourcerole/resource",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"resourcerole",
+								"resource"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "批量创建单个角色对多个资源的关系",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"role_id\": 1,\n\t\"resource_id\": [544545],\n\t\"created_by\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/resourcerole/role",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"resourcerole",
+								"role"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取角色对应的资源",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/role-manage/resourcerole/role/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"resourcerole",
+								"role",
+								"2"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取资源对应的角色",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/role-manage/resourcerole/resource/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"resourcerole",
+								"resource",
+								"2"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "删除资源-角色关系",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "mainSystem",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"role_id\": 1,\n\t\"resource_id\": 2\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/role-manage/resourcerole",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role-manage",
+								"resourcerole"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
