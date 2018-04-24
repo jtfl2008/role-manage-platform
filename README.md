@@ -1,26 +1,28 @@
 ## 角色管理平台
+## 启动服务
+ 1. cd server
+ 2. npm install
+ 3. npm run dev
+
+ （请手动修改／server/config目录下的plugin.js、config.default.js相关端数据库地址配置）
+
 ## 项目概述
-1. 后端：Egg.js basic-auth (接口权限认证)  jsonwebtoken( web端token验证)  MySQL  Redis (sessionRedis) 
+1. 后端：Egg.js basic-auth (接口权限认证)  jsonwebtoken( egg-jwt, web端token验证)  MySQL  Redis (sessionRedis) 
 2. 前端：Vue.js全家桶( vuex + axois + element-ui + vue-router )
-3. 后端接口已经测试完善，web端还在开发中。。。
+3. 后端接口已经测试完善
+4. web端仅供测试参考
 
 (由于做了接口权限管理，不同系统间不能相互访问，所以web端暂时不做token验证。)
 
 ## 目录结构
-<<<<<<< HEAD
+<img src='./intro.png' width="60%">
+<img src='./intro1.png' width="60%">
 
-![image](./intro.png)
-![image](./intro1.png)
-
-=======
-![image][intro.png]
-![image][./intro1.png]
->>>>>>> 29946b56cb7445bd9fc8c95ede13eb9318c9509c
 ## 接口说明
 1. Authorization 类型为 Basic-Auth
 
 ```javascript
-// 以Axios为例，每次请求(除登录、登出外)携带要访问的 系统名称和系统密码，只能访问匹配的系统
+// 以Axios为例，每次请求(除登录、登出外，或在请求拦截器中)携带要访问的 系统名称和系统密码，只能访问匹配的系统
 Axios({
       url: '/role-manage/xxxx',
       data: that.form,
