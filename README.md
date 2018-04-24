@@ -7,10 +7,15 @@
 (由于做了接口权限管理，不同系统间不能相互访问，所以web端暂时不做token验证。)
 
 ## 目录结构
+<<<<<<< HEAD
 
 ![image](./intro.png)
 ![image](./intro1.png)
 
+=======
+![image][intro.png]
+![image][./intro1.png]
+>>>>>>> 29946b56cb7445bd9fc8c95ede13eb9318c9509c
 ## 接口说明
 1. Authorization 类型为 Basic-Auth
 
